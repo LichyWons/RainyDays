@@ -1,0 +1,560 @@
+body { 
+    font-family: 'Roboto', sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px;
+  }
+  
+  .navContainer,
+  #menu-checkbox {
+    display: none;
+  }
+  
+  #menu-checkbox:checked ~ .navContainer {
+    display: block;
+  }
+  
+  .navContainer {
+    position: absolute;
+    background-color: #f2f2f2;
+    z-index: 99;
+    top: 30px;
+    right: 30px;
+  }
+  
+  .navMenu a {
+    display: block;
+    color: var(--darkgreen);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .navLogo img {
+    max-width: 25%;
+  }
+  
+  @media (min-width: 768px) {
+    header {
+      margin: 10px 0;
+    }
+    .hamburger-menu {
+      display: none;
+    }
+    .navContainer {
+      display: block;
+      position: static;
+      font-size: 1.5rem;
+    }
+    .navMenu {
+      display: flex;
+      justify-content: space-between;
+    }
+    .navMenu a {
+      background-color: #fff;
+      color: var(--darkgreen);
+    }
+    .navLogo img {
+      width: 70%;
+      margin-left: 10px;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  section {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .heroMain {
+    position: relative;
+    background-image: url(/images/typical-norwegian-landscape-with-snowy-mountains-2022-02-02-03-49-45-utc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    max-height: 565px;
+    margin: 30px 0px 30px 0px;
+    height: 500px; 
+  }
+  
+  .heroMain .heroTxt {
+    padding-top: 40px;
+    line-height: 1px;
+    margin: 10px;
+  }
+
+  .button {
+    background-color: #d83d3d;
+    border: none;
+    text-decoration: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+  }
+
+
+  .heroMain .button {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+  }
+
+  .heroMain .heroTxt {
+    position: relative;
+    left: 30px;
+    color: black;
+  }
+  
+.mainTitle {
+    position: absolute;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10%;
+}
+
+.productCard img{
+    max-width: 236px;
+    border: black solid;
+    padding: 50px;
+}
+
+.productMake {
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+.productModel {
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+}
+
+.productPrice {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.cardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -8%;
+}
+
+.productCard {
+    max-width: fit-content;
+    text-align: center;
+    line-height: 1px;
+    margin: 2%;
+    margin-top: 5%;
+    text-decoration: none;
+}
+.moreButton {
+    background-color: #d83d3d;
+    border: none;
+    text-decoration: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+}
+
+.heroTextBottom {
+    
+        position: relative;
+        background-image: url(/images/skiing-iceland-2022-11-11-18-37-10-utc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #fff;
+        max-height: 565px;
+        margin: 30px 0px 30px 0px;
+        height: 500px; 
+      }
+
+      .heroTxt {
+        position: solid;
+        padding: 20px;
+      }
+.heroTextBottom .button {
+    position: absolute;
+    left: 50%;
+    bottom: 25%;}
+  
+    .heroBottomTxt {
+        margin: 20%;
+    }
+
+.foot {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        background-color: black;
+        text-align: left;
+    }
+    .copy {
+        color: grey;
+        padding-top: 10px;
+        margin: 1px;
+        
+    }
+    .social-icons {
+        color: white;
+        display: flex;
+        margin: 7px;
+        gap: 10px;
+    }
+
+    .heroAbout {
+        position: relative;
+        background-image: url(/images/portrait-of-travelers-in-tourist-clothes-in-the-mo-2022-01-18-15-51-58-utc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        color: #fff;
+        max-height: 565px;
+        margin: 30px 0px 30px 0px;
+        height: 500px; 
+      }
+      
+      .heroAbout .heroTxtAbout {
+        padding-top: 40px;
+        line-height: 1px;
+        margin: 10px;
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      .heroAbout p {
+        text-align: right;
+        padding-left: 20px;
+        font-size: large;
+      }
+
+      .TextAbout {
+        margin: 100px;
+      }
+
+      .buttonContact {
+        
+        background-color: #d83d3d;
+        border: none;
+        text-decoration: none;
+        padding: 15px 32px;
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        color: white;
+        font-weight: lighter;
+        margin: 300px;
+        margin-top: 20px;
+      }
+ 
+      .heroContact {
+        
+    position: relative;
+    background-image: url(/images/taking-notes-in-nature-2022-09-21-18-41-27-utc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    max-height: 565px;
+    margin: 30px 0px 30px 0px;
+    height: 500px;
+      }
+
+      .heroContactH1Txt {
+        margin: 50px;
+        padding-top: 50px;
+      }
+
+      .heroContactPTxt {
+        margin: 50px;
+        font-size: x-large;
+        font-weight: lighter;
+      }
+
+      .contactContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+       /* padding: 20px 100px; */
+      }
+
+      .contactBox {
+        max-width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #fff;
+      }
+
+      iframe {
+        width: 100%;
+        height: 350px;
+      }
+      .field {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        background-color: rgba(230, 230, 230, 0.6);
+        font-size: 1.1rem;
+        margin-bottom: 100px;
+      }
+      .buttonSend {
+        background-color: #377dbe;
+        border: none;
+        text-decoration: none;
+        padding: 15px 50px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        font-weight: lighter;
+      }
+
+      .heroList {
+        position: relative;
+        background-image: url(/images/beautiful-reine-fishing-village-in-lofoten-islands-2022-02-01-22-36-16-utc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        color: #fff;
+        max-height: 565px;
+        margin: 30px 0px 30px 0px;
+        height: 500px; 
+      }
+
+.jacketName {
+    margin: 50px;
+}
+.priceProduct {
+    font-weight: 500;
+
+}
+.colorProduct {
+    font-weight: 400;
+    text-align: center;
+}
+.buttonContainer {
+    text-align: center;
+    margin: 20px;
+}
+
+.addButton {
+    background-color: #d83d3d;
+        border: none;
+        text-decoration: none;
+        padding: 15px 50px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        font-weight: lighter;
+
+}
+
+      .jacketName span {
+
+        font-weight: 300;
+
+      }
+
+      .jacketContainer {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 0px;
+      }
+      
+      .jacketContainer h2,
+      h1 {
+        margin: 30px 0px 20px 0px;
+      }
+      
+      .jacketContainer hr {
+        margin: 20px 20px 20px 20px;
+      }
+      
+      .imgJacket img {
+        width: 80%;
+      }
+      .imgJacket {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex: 1;
+        background-color: var(--bgcolor);
+        height: 95vh;
+        max-width: 45%;
+        
+      }
+      
+      .details {
+        flex: 1;
+      }
+      
+      .price {
+        margin: 0 0 0px 0;
+      }
+      
+      .details .color,
+      .details .size,
+      .description {
+        letter-spacing: 1px;
+        font-size: 1.875rem;
+        font-weight: 400;
+      }
+      
+      .details span {
+        font-weight: 300;
+      }
+      
+      .details .price,
+      .sizes h2 {
+        font-size: 1.5625rem;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
+      
+     
+      
+     
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+      }
+      
+      .sizes h2 {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 0;
+      }
+      
+      .btnJacketContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+        margin: 20px;
+      }
+      
+      
+      .descriptionTxt {
+        margin: 100px;
+      }
+      
+      .cart-page {
+        margin: 80px auto;
+      }
+     table{
+        width: 100%;
+     border-collapse: collapse;
+     border-bottom: black solid;
+     
+     }
+
+     .cart-info{
+        display: flex;
+        flex-wrap: wrap;
+     }
+
+     th{
+        text-align: left;
+        padding: 5px;
+       
+        
+        font-weight: normal;
+        border-bottom: black solid;
+     }
+
+     td{
+        padding: 10px 5px;
+        border-bottom: grey solid thin;
+     }
+
+     td img{
+        width: 80px;
+        height: auto;
+        margin-right: 10px;
+     }
+
+
+     .total-price{
+        display: flex;
+        justify-content: flex-end;
+     }
+
+     .total-price table{
+        
+        width: 100%;
+        max-width: 300px;
+     }
+
+     td:last-child{
+        text-align: right;
+     }
+    th:last-child{
+    text-align: right;
+    }
+
+    .payment-button {
+        background-color: #377dbe;
+        float: right;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 50px;
+        margin-right: 30px;
+    }
+
+    .payments{
+        float: right;
+        margin-right: 80px;
+        display: flex;
+        gap: 20px;
+    }
+.heroSuccess{
+    background-image: url(/images/box-with-text-never-stop-exploring-in-woman-hands-2021-09-02-06-25-59-utc.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    max-height: 565px;
+    margin: 30px 0px 30px 0px;
+    height: 500px;
+}
+
+.success-txt{
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+    

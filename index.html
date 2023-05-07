@@ -4,43 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-   
-    <title>RainyDays|Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
+<title>RainyDays|Home</title>
 </head>
 <body>
- <header>
-    <img src="images/RainyDays_Logo.png" alt="RainyDays_Logo"/>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="list.html">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
- </header>   
- <main>
-    <section>
-        <img src="images/typical-norwegian-landscape-with-snowy-mountains-2022-02-02-03-49-45-utc.jpg" 
-        alt="Norwegian_Landscape" />
-        <h1> Stay dry and comfy</h1>
-        <h2> Wether you hike, explore, ski, camp or just enjoy the outdoors</h2>
-        <h2>Here you will find the right jacket!</h2>
-        <button><a href="list.html">See jackets</a></button>
-    </section>
-    <section>
-        <h1>Bestsellers</h1>
-        <img src="images/RainyDays_Jacket4.png" alt="Scott Tourer Black" />
-        <h3>SCOTT</h3>
-        <p>TOURER BLACK</p>
-        <p>EUR 149,00</p>
+    <header>
+        <div>
+            <a href="index.html" class="navLogo">
+                <img src="images/RainyDays_Logo.png" alt="website logo"/>
+            </a>
+        </div>
 
-    </section>
- </main>
+        <input type="checkbox" id="menu-checkbox" />
+        
+        <label for="menu-checkbox" class="hamburger-menu">
+            <i class="fas fa-bars fa-2xl"></i>
+        </label>
+          
+        <nav class="navMenu navContainer">
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="/index.html">Home</a>
+            <a href="/list.html">Products</a>
+            <a href="/about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
+    <main>
+        <section class="heroMain">
+          <div class="heroText">
+            <h1 class="heroTxt">Stay dry and comfy</h1>
+            <p class="heroTxt">Wether you hike, explore, ski, camp or just enjoy the outdoors</br>
+            <p class="heroTxt">Here you will find the right jacket!</p>
+            <a href="list.html" class="button">See jackets  ></a>
+          </div>
+        </section>
+
+        <section>
+          <h2>BESTSELLERS</h2>
+        </section>
+
+        <section>
+          <div class="cardContainer">
+            <div class="productCard">
+                <a href="productpage.html">
+                <img src="/images/RainyDays_Jacket1.png">
+                <p class="productMake">SCOTT</p>
+                <p class="productModel">TOURER BLACK</p>
+                <p class="productPrice">EUR 149,00</p></a>
+                <a href="productpage.html" class="moreButton">More  ></a>
+            </div>
+
+            <div class="productCard">
+                <a href="productpage.html">
+                <img src="/images/RainyDays_Jacket2.png">
+                <p class="productMake">1ST WATCH</p>
+                <p class="productModel">GREY WOLF GT</p>
+                <p class="productPrice">EUR 249,00</p></a>
+                <a href="productpage.html" class="moreButton">More  ></a>
+            </div>
+
+            <div class="productCard">
+                <a href="productpage.html">
+                <img src="/images/RainyDays_Jacket3.png">
+                <p class="productMake">KUBOTA</p>
+                <p class="productModel">CYCLE AF</p>
+                <p class="productPrice">EUR 109,00</p></a>
+                <a href="productpage.html" class="moreButton">More  ></a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+            <div class="heroTextBottom">
+                <h1 class="heroTxt">READY FOR WINTER?</h1>
+            
+                
+                <a href="list.html" class="button">See jackets  ></a>
+            </div>
+        
+        </section>
+          
+        
+
+    <main>
+
+    </main>
+ <footer>
+    <div class="foot">
+        <div class="copy">
+            <p>&copy; 2023 RainyDays. All rights reserved.</p>
+        </div>
+    
+        <div class="social-icons">
+            <i class="fab fa-facebook fa-3x"></i>
+            <i class="fab fa-instagram fa-3x"></i>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
