@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+  var id = urlParams.get('id');
+</script>
 <title>RainyDays|Home</title>
 </head>
 <body>
@@ -32,47 +36,66 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
-    <div class="jacketName">
-      <h1>SCOTT <span> NORDIC BIKER</span></h1>
+    <div id="productCard">
+    <script>
+        fetch('https://api.noroff.dev/api/v1/rainy-days/'+id)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            product = data;
+            let sizes = "";
+            product.sizes.forEach(x => {sizes += '<div><h2>'+x+'</h2></div>'})
+            if(product.onSale)
+            {
+              var price1 = '<h2 class="priceProduct">Regular price EUR <span style="text-decoration: line-through;">'+product.price+'</span> - Discount price EUR <span>'+product.discountedPrice+'</span></h2>'
+            }
+            else
+            {
+              var price1 = '<h2 class="priceProduct">Regular price EUR <span>'+product.price+'</span></h2>'
+            }
+            let codeHTML = 
+              '<div class="jacketName">'+
+                '<h1>'+product.title+'</h1>'+
+              '</div>'+
+              '<main class="jacketContainer">'+
+                '<section class="imgJacket">'+
+                  '<img src="'+product.image+'" alt="'+product.title+'" />'+
+                '</section>'+
+                '<section class="details">'+
+                  price1 +
+                  '<hr />'+
+                  '<h3 class="colorProduct">Color: '+product.baseColor+'</h3>'+
+                  '</div>'+
+                  '<hr />'+
+                  '<h2 class="size">Size</h2>'+
+                  '<div class="sizes">'+
+                    sizes+
+                  '</div>'+
+                  '<hr />'+
+                  '<div class="buttonContainer">'+
+                    '<a class="addButton" href="checkout.html">Add to cart</a>'+
+                '</section>'+
+              '</main>'+
+              '<section class="description">'+
+               '<h2>DESCRIPTION</h2>'+
+              '</section>'+
+              '<section>'+
+                '<div class="descritionTxt">'+
+                  '<p>'+product.description+'</p>'+
+                '</div>'+
+              '</section>';
+              productCard.innerHTML = codeHTML;
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
+    </script>
     </div>
-    <main class="jacketContainer">
-      <section class="imgJacket">
-        <img src="images/RainyDays_Jacket1.png" alt="SCOTT" />
-      </section>
-      <section class="details">
-        
-        <h2 class="priceProduct">EUR <span>249,00</span></h2>
-        <hr />
-        <h3 class="colorProduct">Color: Black/Grey</h3>
-        
-          
-        </div>
-        <hr />
-        <h2 class="size">Size</h2>
-        <div class="sizes">
-          <div><h2>S</h2></div>
-          <div><h2>M</h2></div>
-          <div><h2>L</h2></div>
-          <div><h2>XL</h2></div>
-          <div><h2>XXL</h2></div>
-        </div>
-        <hr />
-        <div class="buttonContainer">
-          <a class="addButton" href="checkout.html">Add to cart</a>
-        
-      </section>
-      
-    </main>
 
-    <section class="description">
-      <h2>DESCRIPTION</h2>
-    </section>
-    <section>
-      <div class="descritionTxt">
-      <p>Aliquam erat volutpat. Duis faucibus nisl eget volutpat suscipit. Integer accumsan diam urna, sit amet laoreet arcu pharetra sed. Aliquam libero quam, hendrerit eu libero sed, suscipit feugiat sapien. Integer lobortis iaculis tortor. Ut feugiat, libero sit amet congue elementum, massa sapien dictum neque, vitae lobortis erat sapien nec purus. Donec pretium sodales nisl vitae dignissim. Proin dictum lacinia odio, ac vehicula odio tristique ac. Proin nisi nulla, condimentum vel sapien eget, aliquet tristique nisi. Suspendisse potenti. Donec eu mollis lectus, quis aliquet nisi.</p>
-  </div>
-</section>
 <footer>
   <div class="foot">
       <div class="copy">
