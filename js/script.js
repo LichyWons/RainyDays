@@ -1,3 +1,13 @@
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Select the spinner element
+  const spinner = document.getElementById('spinner');
+
+  // Show the spinner before fetching data
+  spinner.style.display = 'block';
+
+
 fetch('https://api.noroff.dev/api/v1/rainy-days')
 .then(response => {
   if (!response.ok) {
@@ -48,3 +58,10 @@ fetch('https://api.noroff.dev/api/v1/rainy-days')
 .catch(error => {
   console.error('There was a problem with the fetch operation:', error);
 }); 
+spinner.style.display = 'none'
+});
+
+
+
+
+
