@@ -159,7 +159,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: -8%;
+    margin-top: 0;
 }
 
 .productCard {
@@ -301,6 +301,7 @@ h2 {
       .contactContainer {
         position: relative;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -310,7 +311,8 @@ h2 {
 
       .contactBox {
         max-width: auto;
-        display: grid;
+        display: grid flex;
+        flex-wrap: wrap;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
@@ -563,6 +565,7 @@ h2 {
 
 .spinner {
   display: none;
+  margin: 6rem auto;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;
