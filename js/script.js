@@ -1,14 +1,24 @@
 
-
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener ("DOMContentLoaded", function() )
   // Select the spinner element
   const spinner = document.getElementById('spinner');
 
   // Show the spinner before fetching data
   spinner.style.display = 'block';
 
+  fetch('https://krzysztofbytniewski.com/wp-json/wc/store/products')
+  .then(response => response.json())
+  .then(data => displayProducts(data))
+  .catch(error => console.error('Error fetching the products:', error));
+  
+*/
+ 
+  
 
-fetch('https://api.noroff.dev/api/v1/rainy-days')
+
+
+
+fetch('https://cors.noroff.dev/http://krzysztofbytniewski.com/wp-json/wc/store/products')
 .then(response => {
   if (!response.ok) {
     throw new Error('Network response was not ok');
@@ -41,7 +51,7 @@ fetch('https://api.noroff.dev/api/v1/rainy-days')
           p2.innerText = product.title;
       let p3 = document.createElement('p');
           p3.className = 'productPrice';
-          p3.innerHTML = "EUR "+price1;
+          p3.innerHTML = "kr "+price;
       let link2 = document.createElement('a');
           link2.className = 'moreButton';
           link2.href = '/productpage.html?id='+product.id;
@@ -87,15 +97,14 @@ fetch('https://api.noroff.dev/api/v1/rainy-days')
 .finally(() => {
   spinner.style.display = 'none';
 });
-});
+;
 
 
 
 
 
 
-
-fetch('https://api.noroff.dev/api/v1/rainy-days')
+fetch('https://cors.noroff.dev/http://krzysztofbytniewski.com/wp-json/wc/store/products')
 .then(response => {
   if (!response.ok) {
     throw new Error('Network response was not ok');
@@ -127,7 +136,7 @@ fetch('https://api.noroff.dev/api/v1/rainy-days')
           p2.innerText = product.title;
       let p3 = document.createElement('p');
           p3.className = 'productPrice';
-          p3.innerHTML = "EUR "+price1;
+          p3.innerHTML = "kr "+price1;
       let link2 = document.createElement('a');
           link2.className = 'moreButton';
           link2.href = '/productpage.html?id='+product.id;
@@ -144,7 +153,3 @@ fetch('https://api.noroff.dev/api/v1/rainy-days')
 .catch(error => {
   console.error('There was a problem with the fetch operation:', error);
 });
-
-
-
-
