@@ -1,8 +1,8 @@
 
 body { 
     font-family: 'Roboto', sans-serif;
-    max-width: 1500px;
-    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.062);
+margin: auto;    
 }
 
 header {
@@ -24,7 +24,7 @@ header {
   
   .navContainer {
     position: absolute;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     z-index: 99;
     top: 30px;
     right: 30px;
@@ -59,14 +59,20 @@ header {
       justify-content: space-between;
     }
     .navMenu a {
-      background-color: #fff;
+      background-color: rgba(0, 0, 0, 0.062);
       color: var(--darkgreen);
     }
     .navLogo img {
       width: 70%;
       margin-left: 10px;
     }
-  }
+   }
+   @media (max-width: 600px) {
+    .heroText p {
+      display: none;
+    }
+    
+   }
 
   h1 {
     font-size: 3rem;
@@ -77,21 +83,24 @@ header {
   }
 
   .heroMain {
+    
     position: relative;
-    background-image: url(/images/typical-norwegian-landscape-with-snowy-mountains-2022-02-02-03-49-45-utc.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/typical-norwegian-landscape-with-snowy-mountains-2022-02-02-03-49-45-utc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #fff;
     max-height: 565px;
     margin: 30px 0px 30px 0px;
     height: 500px; 
   }
+
+  
   
   .heroMain .heroTxt {
+    color: white;
     padding-top: 40px;
-    line-height: 1px;
     margin: 10px;
+    flex-wrap: wrap;
   }
 
   .button {
@@ -104,6 +113,8 @@ header {
     font-size: 20px;
     color: white;
     font-weight: lighter;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
   }
 
 
@@ -116,7 +127,6 @@ header {
   .heroMain .heroTxt {
     position: relative;
     left: 30px;
-    color: black;
   }
   
 .mainTitle {
@@ -180,12 +190,14 @@ h2 {
     font-size: 20px;
     color: white;
     font-weight: lighter;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
 
 .heroTextBottom {
     
         position: relative;
-        background-image: url(/images/skiing-iceland-2022-11-11-18-37-10-utc.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/skiing-iceland-2022-11-11-18-37-10-utc.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -231,7 +243,7 @@ h2 {
 
     .heroAbout {
         position: relative;
-        background-image: url(/images/portrait-of-travelers-in-tourist-clothes-in-the-mo-2022-01-18-15-51-58-utc.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/portrait-of-travelers-in-tourist-clothes-in-the-mo-2022-01-18-15-51-58-utc.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
@@ -241,6 +253,10 @@ h2 {
         height: 500px; 
       }
       
+      .heroTextAbout {
+        margin: 50px;
+      }
+
       .heroAbout .heroTxtAbout {
         padding-top: 40px;
         line-height: 1px;
@@ -270,14 +286,16 @@ h2 {
         font-size: 20px;
         color: white;
         font-weight: lighter;
-        margin: 300px;
+        margin: 7rem;
         margin-top: 20px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
       }
  
       .heroContact {
         
     position: relative;
-    background-image: url(/images/taking-notes-in-nature-2022-09-21-18-41-27-utc.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/taking-notes-in-nature-2022-09-21-18-41-27-utc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -318,7 +336,7 @@ h2 {
         align-items: center;
         justify-content: space-between;
         text-align: center;
-        background-color: #fff;
+        /*background-color: #fff;*/
       }
 
       iframe {
@@ -328,7 +346,15 @@ h2 {
       .field {
         width: 80%;
         padding: 0.5rem 1rem;
-        background-color: rgba(230, 230, 230, 0.6);
+        background-color: rgba(255, 255, 255, 0.6);
+        font-size: 1.1rem;
+        margin-bottom: 100px;
+      }
+      .fieldMessage {
+        width: 80%;
+        height: 15rem;
+        padding: 0.5rem 1rem;
+        background-color: rgba(255, 255, 255, 0.6);
         font-size: 1.1rem;
         margin-bottom: 100px;
       }
@@ -341,11 +367,16 @@ h2 {
         font-size: 20px;
         color: white;
         font-weight: lighter;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+      }
+      .contactDetails {
+        margin: 5rem;
       }
 
       .heroList {
         position: relative;
-        background-image: url(/images/beautiful-reine-fishing-village-in-lofoten-islands-2022-02-01-22-36-16-utc.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/beautiful-reine-fishing-village-in-lofoten-islands-2022-02-01-22-36-16-utc.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
@@ -380,6 +411,8 @@ h2 {
         font-size: 20px;
         color: white;
         font-weight: lighter;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 
 }
 
@@ -533,6 +566,8 @@ h2 {
         text-decoration: none;
         padding: 15px 50px;
         margin-right: 30px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
     }
 
     .payments{
