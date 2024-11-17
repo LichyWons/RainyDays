@@ -22,7 +22,7 @@ function displaySingleProduct(product) {
     <h2>${product.name}</h2>
     <h3>NOK ${product.prices.price}</h3>
     <a>${product.description}</a>
-    <a href="list.html" class="button">Add to cart</a>`
+    <a href="checkout.html" class="button">Add to cart</a>`
  
     }
 
