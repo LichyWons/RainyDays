@@ -205,7 +205,7 @@ fetch('https://cors.noroff.dev/http://krzysztofbytniewski.com/wp-json/wc/store/p
   
 */
  
-const url = "http://krzysztofbytniewski.com/wp-json/wc/store/products";
+/*const url = "http://krzysztofbytniewski.com/wp-json/wc/store/products";
 
 const productContainer = document.querySelector("#productContainer");
 
