@@ -143,6 +143,7 @@ h2 {
     max-width: 236px;
     border: black solid;
     padding: 50px;
+    display: flex;
 }
 
 .productMake {
@@ -176,8 +177,9 @@ h2 {
     max-width: fit-content;
     text-align: center;
     line-height: 1px;
-    margin: 2%;
+    margin: auto;
     margin-top: 5%;
+    margin-bottom: 20%;
     text-decoration: none;
 }
 .moreButton {

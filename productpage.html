@@ -15,10 +15,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 <link rel="manifest" href="favicon/site.webmanifest">
 <script src="https://kit.fontawesome.com/82c2243d56.js" crossorigin="anonymous"></script>
-<script>
-  var urlParams = new URLSearchParams(window.location.search);
-  var id = urlParams.get('id');
-</script>
+
 
  <!-- Hotjar Tracking Code for Site RainyDays -->
  <script>
@@ -53,9 +50,14 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div id="productCard">
+    <div id="productCard" class="productCard">
+      <div class="spinner" id="spinner">
+                
+      </div>
     <script>
-        fetch('https://api.noroff.dev/api/v1/rainy-days/'+id)
+        
+        /*fetch("https://cors.noroff.dev/http://krzysztofbytniewski.com/wp-json/wc/store/products"
++id);
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -110,6 +112,7 @@
           .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
           });
+          */
     </script>
     </div>
 
@@ -125,5 +128,6 @@
       </div>
   </div>
 </footer>
+<script src="js/fetchSingleProductScript.js"></script>
 </body>
 </html>
