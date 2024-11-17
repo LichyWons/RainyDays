@@ -28,7 +28,7 @@ function displaySingleProduct(product) {
 
     fetchAndDisplaySingleProduct();
     
-console.log(product.images)
+
 
 
 
