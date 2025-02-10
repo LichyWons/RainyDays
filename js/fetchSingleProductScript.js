@@ -2,7 +2,7 @@ const spinner = document.getElementById('spinner');
 spinner.style.display = 'block';
 
 const productContainer = document.getElementById('productCard');
-const URL = "https://cors.noroff.dev/http://krzysztofbytniewski.com/wp-json/wc/store/products/";
+const URL = "https://cors.noroff.dev/http://rainydays.krzysztofbytniewski.com/wp-json/wc/store/products/";
 
 async function fetchAndDisplaySingleProduct() {
     const productId = new URLSearchParams (window.location.search).get("id");
