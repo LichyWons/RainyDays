@@ -1,6 +1,6 @@
-# Arctic Overland Explorer
+# RainyDays
 
-![image](https://github.com/Noroff-FEU-Assignments/project-exam-1-LichyWons/blob/3a5e3df6575738c8d7b3136baa65f1bf3bbb918a/google-pixelbook-mockup%20(2).png)
+![image](https://krzyby.netlify.app/images/google-pixelbook-mockup%20(3)%20(1).png)
 
 ## Description
 
@@ -21,7 +21,7 @@ Visit the live site: [Rainy Days](https://guileless-granita-263040.netlify.app/)
 Simply clone the repo:
 
 ```bash
-git clone git@github.com/Noroff-FEU-Assignments/project-exam-1-LichyWons.git
+git clone git@github.com/LichyWons/RainyDays.git
 ```
 
 ### Running
